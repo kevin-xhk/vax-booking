@@ -2,11 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
+use App\Models\Vaccine;
 use Illuminate\Database\Seeder;
 use DB;
 
-class UserSeeder extends Seeder
+class VaccineSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,10 +15,10 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        $count = DB::table('users')->count();
+        $count = DB::table('vaccines')->count();
         
         if($count == 0){
-            User::factory()->count(50)->create();
+            Vaccine::factory()->count(5)->create();
         }
 
     }
